@@ -1,22 +1,28 @@
 import React from 'react'
+import MiniProfile from './MiniProfile';
 import Posts from './Posts';
 import Stories from './Stories';
+import Suggestions from './Suggestions';
 
 function Feed() {
   return (
-      <main className='grid grid-cols-1 md:grid-cols-1 md:max-w-3xl
-    xl:grid-cols-1 xl:max-w-6xl mx-auto' >
-		   
+		<main
+			className="grid grid-cols-1 md:grid-cols-1 md:max-w-3xl
+    xl:grid-cols-2 xl:max-w-6xl mx-auto"
+		>
 			<section>
-				<Stories className="col-span-2"/>
+				<Stories className="col-span-2" />
 				<Posts />
 			</section>
-      
-      <section>
-          {/*  Mini Profile */}
-          {/*  Suggestions */}
-      </section>
 
+			<section>
+				{/*  Mini Profile */}
+				<div className="fixed top-20">
+					<MiniProfile className="hidden xl:inline-grid md:col-span-1" />
+					{/*  Suggestions */}
+					<Suggestions />
+				</div>
+			</section>
 		</main>
   );
 }
