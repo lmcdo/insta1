@@ -10,7 +10,6 @@ import {
 	HomeIcon,
 } from "@heroicons/react/solid";
 
-
 function Header() {
 	return (
 		<div className="shadow-sm border-b bg-white sticky top-0 z-50">
@@ -55,16 +54,20 @@ function Header() {
 					<MenuIcon className="h-6 md:hidden cursor-pointer" />
 					<div className="relative navBtn">
 						<PaperAirplaneIcon className="navBtn rotate-45" />
-						<div className="absolute -top-0 -right-1 text-xs w-5 h-5
+						<div
+							className="absolute -top-0 -right-1 text-xs w-5 h-5
 						bg-red-500 flex animate-pulse rounded-full items-center justify-center
-						text-white">3</div>
+						text-white"
+						>
+							3
+						</div>
 					</div>
 					<PlusCircleIcon className="navBtn" />
 					<UserGroupIcon className="navBtn" />
 					<HeartIcon className="navBtn" />
 
 					<img
-						src="https://links.papareact.com/3ke"
+						src="https://i.ibb.co/Ptgx60W/P1010859.jpg"
 						alt="profile_pic"
 						className="h-10 rounded-full cursor-pointer"
 					/>
