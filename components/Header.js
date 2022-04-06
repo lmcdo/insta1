@@ -9,8 +9,13 @@ import {
 	MenuIcon,
 	HomeIcon,
 } from "@heroicons/react/solid";
+import { useSession, signOut, signIn } from "next-auth/react";
 
 function Header() {
+	const { data: session } = useSession();
+
+	console.log({ session });
+
 	return (
 		<div className="shadow-sm border-b bg-white sticky top-0 z-50">
 			<div className=""></div>
@@ -52,6 +57,10 @@ function Header() {
 				<div className="flex items-center justify-end space-x-4">
 					<HomeIcon className="navBtn" />
 					<MenuIcon className="h-6 md:hidden cursor-pointer" />
+
+					{session ? ( 
+					<>
+					
 					<div className="relative navBtn">
 						<PaperAirplaneIcon className="navBtn rotate-45" />
 						<div
@@ -67,10 +76,17 @@ function Header() {
 					<HeartIcon className="navBtn" />
 
 					<img
-						src="https://i.ibb.co/Ptgx60W/P1010859.jpg"
+						onClick={signOut}
+						src={session.user.image}
 						alt="profile_pic"
 						className="h-10 rounded-full cursor-pointer"
 					/>
+					</>
+						
+					) : (
+						<button onClick={signIn}>Sign In</button>
+			
+			)}
 					{/* Bottom */}
 				</div>
 			</div>
