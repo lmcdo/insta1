@@ -23,7 +23,7 @@ function Header() {
 				{/* 				/* Left */}
 				<div className="relative hidden lg:inline-grid h-24 w-24">
 					<Image
-						src="https://links.papareact.com/ocw"
+						src="https://i.ibb.co/Ptgx60W/P1010859.jpg"
 						layout="fill"
 						objectFit="contain"
 					/>
@@ -58,35 +58,32 @@ function Header() {
 					<HomeIcon className="navBtn" />
 					<MenuIcon className="h-6 md:hidden cursor-pointer" />
 
-					{session ? ( 
-					<>
-					
-					<div className="relative navBtn">
-						<PaperAirplaneIcon className="navBtn rotate-45" />
-						<div
-							className="absolute -top-0 -right-1 text-xs w-5 h-5
+					{session ? (
+						<>
+							<div className="relative navBtn">
+								<PaperAirplaneIcon className="navBtn rotate-45" />
+								<div
+									className="absolute -top-0 -right-1 text-xs w-5 h-5
 						bg-red-500 flex animate-pulse rounded-full items-center justify-center
 						text-white"
-						>
-							3
-						</div>
-					</div>
-					<PlusCircleIcon className="navBtn" />
-					<UserGroupIcon className="navBtn" />
-					<HeartIcon className="navBtn" />
+								>
+									3
+								</div>
+							</div>
+							<PlusCircleIcon className="navBtn" />
+							<UserGroupIcon className="navBtn" />
+							<HeartIcon className="navBtn" />
 
-					<img
-						onClick={signOut}
-						src={session.user.image}
-						alt="profile_pic"
-						className="h-10 rounded-full cursor-pointer"
-					/>
-					</>
-						
+							<img
+								onClick={signOut}
+								src={session.user.image}
+								alt="profile_pic"
+								className="h-10 w-10 rounded-full cursor-pointer"
+							/>
+						</>
 					) : (
 						<button onClick={signIn}>Sign In</button>
-			
-			)}
+					)}
 					{/* Bottom */}
 				</div>
 			</div>
