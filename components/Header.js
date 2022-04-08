@@ -23,7 +23,7 @@ function Header() {
 				{/* 				/* Left */}
 				<div className="relative hidden lg:inline-grid h-24 w-24">
 					<Image
-						src="https://i.ibb.co/Ptgx60W/P1010859.jpg"
+						src="https://links.papareact.com/ocw"
 						layout="fill"
 						objectFit="contain"
 					/>
