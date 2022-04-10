@@ -1,4 +1,3 @@
-
 import recoil, { RecoilRoot } from "recoil";
 import "../styles/globals.css";
 import { SessionProvider } from "next-auth/react";
