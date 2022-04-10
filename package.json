@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.1.2",
+    "@next/eslint-plugin-next": "^12.1.4",
     "autoprefixer": "^10.4.4",
     "babel-eslint": "^10.1.0",
     "eslint": "8.12.0",
