@@ -38,9 +38,6 @@ function Modal() {
             timestamp: serverTimestamp(),
         });
 
-        console.log("Now doc added with ID", docRef.id);
-        console.log("storage url", `posts/${docRef.id}/image`);
-
         const imageRef = storageRef(storage, `posts/${docRef.id}/image`);
     
 
